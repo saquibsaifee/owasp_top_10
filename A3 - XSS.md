@@ -1,6 +1,8 @@
 
 https://owasp.org/Top10/A03_2021-Injection/
 
+https://www.hackingarticles.in/cross-site-scripting-exploitation/
+
 Kontra lab: https://application.security/free-application-security-training/cross-site-scripting-vulnerability-in-tiktok
 
 1.  Cross-site scripting (XXS) - XSS flaws occur whenever an application includes untrusted data in a new web page without proper validation or escaping, or updates an existing web page with user-supplied data using a browser API that can create HTML or JavaScript. XSS allows attackers to execute scripts in the victim’s browser which can hijack user sessions, deface web sites, or redirect the user to malicious sites.
@@ -42,3 +44,5 @@ DOM -DOM stands for Document Object Model and is a programming interface for HTM
 DOM Based XSS is where the JavaScript execution happens directly in the browser without any new pages being loaded or data submitted to backend code. Execution occurs when the website JavaScript code acts on input or user interaction. An example of this could be a website's JavaScript code getting the contents from the window.location.hash parameter and then write that onto the page in the currently being viewed section. The attacker can read and manipulate the document object model (DOM) data to craft a malicious URL. The attacker uses this URL to trick a user into clicking it. If the user clicks the link, the attacker can steal the user’s active session information, keystrokes, and so on. Unlike stored XSS and reflected XSS, the entire DOM-based XSS attack happens on the client browser (i.e., nothing goes back to the server).
 
 Use escapeHTML() to escape all special HTML character.
+
+Use {{ var | escape }} in Django framework HTML encoding
